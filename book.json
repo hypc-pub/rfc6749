@@ -1,0 +1,10 @@
+{
+    "title": "RFC6749",
+    "plugins": [
+        "theme-opendocs",
+        "-sharing",
+        "-fontsettings"
+    ],
+    "pluginsConfig": {
+    }
+}
