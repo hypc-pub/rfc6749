@@ -82,7 +82,7 @@
  * [OAuth访问令牌类型注册表](Section11/11.1.md)
    * [注册模板](Section11/11.1.1.md)
  * [OAuth参数注册表](Section11/11.2.md)
-   * [注册模板](Section11/11.2.1md)
+   * [注册模板](Section11/11.2.1.md)
    * [初始注册表内容](Section11/11.2.2.md)
  * [OAuth授权端点响应类型注册表](Section11/11.3.md)
    * [注册模板](Section11/11.3.1.md)
