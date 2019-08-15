@@ -1,0 +1,560 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>规范性文献 · RFC6749</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+
+    
+    <link rel="next" href="12.2.html" />
+    
+    
+    <link rel="prev" href="12.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="gb-page-wrapper">
+    <header class="gb-page-header">
+        <div class="container">
+        
+            <a href=".." class="logo">
+                <img src="../gitbook/images/logo/64.png">
+                <h1>RFC6749</h1>
+            </a>
+
+            
+
+            <div class="page_search_block">
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                
+                <a href="12.2.html" class="btn btn-link pull-right hidden-xs">
+                    <i class="octicon octicon-chevron-right"></i>
+                </a>
+                
+                
+                <a href="12.html" class="btn btn-link pull-right hidden-xs">
+                    <i class="octicon octicon-chevron-left"></i>
+                </a>
+                
+            
+            </div>
+        
+        </div>
+    </header>
+
+    <div class="gb-page-body">
+        <div class="gb-page-inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        
+
+
+
+    
+    <div class="panel panel-default ">
+        
+
+        <div class="list-group">
+            
+    
+        
+        <a href="../" class="list-group-item ">
+        
+
+            
+
+            
+
+            首页
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../Section01/1.html" class="list-group-item ">
+        
+
+            
+
+            
+            <i class="octicon octicon-chevron-right"></i>
+            
+
+            介绍
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../Section02/2.html" class="list-group-item ">
+        
+
+            
+
+            
+            <i class="octicon octicon-chevron-right"></i>
+            
+
+            客户端注册
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../Section03/3.html" class="list-group-item ">
+        
+
+            
+
+            
+            <i class="octicon octicon-chevron-right"></i>
+            
+
+            协议端点
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../Section04/4.html" class="list-group-item ">
+        
+
+            
+
+            
+            <i class="octicon octicon-chevron-right"></i>
+            
+
+            获得授权
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../Section05/5.html" class="list-group-item ">
+        
+
+            
+
+            
+            <i class="octicon octicon-chevron-right"></i>
+            
+
+            颁发访问令牌
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../Section06/6.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            刷新访问令牌
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../Section07/7.html" class="list-group-item ">
+        
+
+            
+
+            
+            <i class="octicon octicon-chevron-right"></i>
+            
+
+            访问受保护资源
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../Section08/8.html" class="list-group-item ">
+        
+
+            
+
+            
+            <i class="octicon octicon-chevron-right"></i>
+            
+
+            可扩展性
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../Section09/9.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            本机应用程序
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../Section10/10.html" class="list-group-item ">
+        
+
+            
+
+            
+            <i class="octicon octicon-chevron-right"></i>
+            
+
+            安全性考虑
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../Section11/11.html" class="list-group-item ">
+        
+
+            
+
+            
+            <i class="octicon octicon-chevron-right"></i>
+            
+
+            IANA考量
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="12.html" class="list-group-item ">
+        
+
+            
+
+            
+            <i class="octicon octicon-chevron-down"></i>
+            
+
+            参考文献
+
+        
+        </a>
+        
+
+        
+        
+    
+        
+        <a href="12.1.html" class="list-group-item active">
+        
+
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+
+            
+
+            规范性文献
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="12.2.html" class="list-group-item ">
+        
+
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+
+            
+
+            参考性文献
+
+        
+        </a>
+        
+
+        
+    
+
+        
+    
+        
+        <a href="../AppendixA/a.html" class="list-group-item ">
+        
+
+            
+
+            
+            <i class="octicon octicon-chevron-right"></i>
+            
+
+            附录A. 增强巴科斯-诺尔范式（ABNF）语法
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../AppendixB/b.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            附录B. 使用application/x-www-form-urlencoded媒体类型
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../AppendixC/c.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            附录C. 致谢
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../Errata/errata.html" class="list-group-item ">
+        
+
+            
+
+            
+            <i class="octicon octicon-chevron-right"></i>
+            
+
+            勘误
+
+        
+        </a>
+        
+
+        
+    
+
+        </div>
+    </div>
+    
+
+
+
+                    </div>
+                    <div class="col-md-9">
+                        
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                            
+                            <div class="gb-markdown book-page-inner">
+                                <h1 id="121-&#x89C4;&#x8303;&#x6027;&#x53C2;&#x8003;&#x6587;&#x4EF6;">12.1. &#x89C4;&#x8303;&#x6027;&#x53C2;&#x8003;&#x6587;&#x4EF6;</h1>
+<ul>
+<li>[RFC2119]
+Bradner, S., &quot;Key words for use in RFCs to Indicate Requirement Levels&quot;, BCP 14,RFC 2119, March 1997.</li>
+<li>[RFC2246]
+Dierks, T. and C. Allen, &quot;The TLS Protocol Version 1.0&quot;, RFC 2246, January 1999.</li>
+<li>[RFC2616]
+Fielding, R., Gettys, J., Mogul, J., Frystyk, H., Masinter, L., Leach, P., and T. Berners-Lee, &quot;Hypertext Transfer Protocol -- HTTP/1.1&quot;, RFC 2616, June 1999.</li>
+<li>[RFC2617]
+Franks, J., Hallam-Baker, P., Hostetler, J., Lawrence, S., Leach, P., Luotonen, A., and L. Stewart, &quot;HTTP Authentication: Basic and Digest Access Authentication&quot;, RFC 2617, June 1999.</li>
+<li>[RFC2818]
+Rescorla, E., &quot;HTTP Over TLS&quot;, RFC 2818, May 2000.</li>
+<li>[RFC3629]
+Yergeau, F., &quot;UTF-8, a transformation format of ISO 10646&quot;, STD 63, RFC 3629, November 2003.</li>
+<li>[RFC3986]
+Berners-Lee, T., Fielding, R., and L. Masinter, &quot;Uniform Resource Identifier (URI): Generic Syntax&quot;, STD 66, RFC 3986, January 2005.</li>
+<li>[RFC4627]
+Crockford, D., &quot;The application/json Media Type for JavaScript Object Notation (JSON)&quot;, RFC 4627, July 2006.</li>
+<li>[RFC4949]
+Shirey, R., &quot;Internet Security Glossary, Version 2&quot;, RFC 4949, August 2007.</li>
+<li>[RFC5226]
+Narten, T. and H. Alvestrand, &quot;Guidelines for Writing an IANA Considerations Section in RFCs&quot;, BCP 26,RFC 5226, May 2008.</li>
+<li>[RFC5234]
+Crocker, D. and P. Overell, &quot;Augmented BNF for Syntax Specifications: ABNF&quot;, STD 68, RFC 5234, January 2008.</li>
+<li>[RFC5246]
+Dierks, T. and E. Rescorla, &quot;The Transport Layer Security (TLS) Protocol Version 1.2&quot;, RFC 5246, August 2008.</li>
+<li>[RFC6125]
+Saint-Andre, P. and J. Hodges, &quot;Representation and Verification of Domain-Based Application Service Identity within Internet Public Key Infrastructure Using X.509 (PKIX) Certificates in the Context of Transport Layer Security (TLS)&quot;, RFC 6125, March 2011.</li>
+<li>[USASCII]
+American National Standards Institute, &quot;Coded Character Set -- 7-bit American Standard Code for Information Interchange&quot;, ANSI X3.4, 1986.</li>
+<li>[W3C.REC-html401-19991224]
+Raggett, D., Le Hors, A., and I. Jacobs, &quot;HTML 4.01 Specification&quot;, World Wide Web Consortium Recommendation REC-html401-19991224, December 1999, <a href="http://www.w3.org/TR/1999/REC-html401-19991224" target="_blank">http://www.w3.org/TR/1999/REC-html401-19991224</a>.</li>
+<li>[W3C.REC-xml-20081126]
+Bray, T., Paoli, J., Sperberg-McQueen, C., Maler, E., and F. Yergeau, &quot;Extensible Markup Language (XML) 1.0 (Fifth Edition)&quot;, World Wide Web Consortium Recommendation REC-xml-20081126, November 2008, <a href="http://www.w3.org/TR/2008/REC-xml-20081126" target="_blank">http://www.w3.org/TR/2008/REC-xml-20081126</a>.</li>
+</ul>
+
+                            </div>
+                            
+                        
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../gitbook/gitbook.js"></script>
+
+    
+    <script src="../gitbook/gitbook-plugin-ga/plugin.js"></script>
+    
+
+    
+    <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+    
+
+    
+    <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+    
+
+<script>
+(function() {
+    gitbook.page.hasChanged({"page":{"title":"规范性文献","level":"1.13.1","depth":2,"next":{"title":"参考性文献","level":"1.13.2","depth":2,"path":"Section12/12.2.md","ref":"Section12/12.2.md","articles":[]},"previous":{"title":"参考文献","level":"1.13","depth":1,"path":"Section12/12.md","ref":"Section12/12.md","articles":[{"title":"规范性文献","level":"1.13.1","depth":2,"path":"Section12/12.1.md","ref":"Section12/12.1.md","articles":[]},{"title":"参考性文献","level":"1.13.2","depth":2,"path":"Section12/12.2.md","ref":"Section12/12.2.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["theme-opendocs","-sharing","-fontsettings","ga"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"ga":{"configuration":"auto","token":"UA-131598830-2"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"theme-opendocs":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"RFC6749","gitbook":"*"},"file":{"path":"Section12/12.1.md","mtime":"2019-08-15T02:35:20.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-15T02:40:32.168Z"},"basePath":"..","book":{"language":""}});
+})();
+</script>
+
+        
+    </body>
+</html>
+

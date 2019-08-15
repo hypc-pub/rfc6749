@@ -1,0 +1,566 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>客户端标识 · RFC6749</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+
+    
+    <link rel="next" href="2.3.html" />
+    
+    
+    <link rel="prev" href="2.1.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="gb-page-wrapper">
+    <header class="gb-page-header">
+        <div class="container">
+        
+            <a href=".." class="logo">
+                <img src="../gitbook/images/logo/64.png">
+                <h1>RFC6749</h1>
+            </a>
+
+            
+
+            <div class="page_search_block">
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                
+                <a href="2.3.html" class="btn btn-link pull-right hidden-xs">
+                    <i class="octicon octicon-chevron-right"></i>
+                </a>
+                
+                
+                <a href="2.1.html" class="btn btn-link pull-right hidden-xs">
+                    <i class="octicon octicon-chevron-left"></i>
+                </a>
+                
+            
+            </div>
+        
+        </div>
+    </header>
+
+    <div class="gb-page-body">
+        <div class="gb-page-inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        
+
+
+
+    
+    <div class="panel panel-default ">
+        
+
+        <div class="list-group">
+            
+    
+        
+        <a href="../" class="list-group-item ">
+        
+
+            
+
+            
+
+            首页
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../Section01/1.html" class="list-group-item ">
+        
+
+            
+
+            
+            <i class="octicon octicon-chevron-right"></i>
+            
+
+            介绍
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="2.html" class="list-group-item ">
+        
+
+            
+
+            
+            <i class="octicon octicon-chevron-down"></i>
+            
+
+            客户端注册
+
+        
+        </a>
+        
+
+        
+        
+    
+        
+        <a href="2.1.html" class="list-group-item ">
+        
+
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+
+            
+
+            客户端类型
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="2.2.html" class="list-group-item active">
+        
+
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+
+            
+
+            客户端标识
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="2.3.html" class="list-group-item ">
+        
+
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+
+            
+            <i class="octicon octicon-chevron-right"></i>
+            
+
+            客户端身份验证
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="2.4.html" class="list-group-item ">
+        
+
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+
+            
+
+            未注册的客户端
+
+        
+        </a>
+        
+
+        
+    
+
+        
+    
+        
+        <a href="../Section03/3.html" class="list-group-item ">
+        
+
+            
+
+            
+            <i class="octicon octicon-chevron-right"></i>
+            
+
+            协议端点
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../Section04/4.html" class="list-group-item ">
+        
+
+            
+
+            
+            <i class="octicon octicon-chevron-right"></i>
+            
+
+            获得授权
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../Section05/5.html" class="list-group-item ">
+        
+
+            
+
+            
+            <i class="octicon octicon-chevron-right"></i>
+            
+
+            颁发访问令牌
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../Section06/6.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            刷新访问令牌
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../Section07/7.html" class="list-group-item ">
+        
+
+            
+
+            
+            <i class="octicon octicon-chevron-right"></i>
+            
+
+            访问受保护资源
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../Section08/8.html" class="list-group-item ">
+        
+
+            
+
+            
+            <i class="octicon octicon-chevron-right"></i>
+            
+
+            可扩展性
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../Section09/9.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            本机应用程序
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../Section10/10.html" class="list-group-item ">
+        
+
+            
+
+            
+            <i class="octicon octicon-chevron-right"></i>
+            
+
+            安全性考虑
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../Section11/11.html" class="list-group-item ">
+        
+
+            
+
+            
+            <i class="octicon octicon-chevron-right"></i>
+            
+
+            IANA考量
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../Section12/12.html" class="list-group-item ">
+        
+
+            
+
+            
+            <i class="octicon octicon-chevron-right"></i>
+            
+
+            参考文献
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../AppendixA/a.html" class="list-group-item ">
+        
+
+            
+
+            
+            <i class="octicon octicon-chevron-right"></i>
+            
+
+            附录A. 增强巴科斯-诺尔范式（ABNF）语法
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../AppendixB/b.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            附录B. 使用application/x-www-form-urlencoded媒体类型
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../AppendixC/c.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            附录C. 致谢
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../Errata/errata.html" class="list-group-item ">
+        
+
+            
+
+            
+            <i class="octicon octicon-chevron-right"></i>
+            
+
+            勘误
+
+        
+        </a>
+        
+
+        
+    
+
+        </div>
+    </div>
+    
+
+
+
+                    </div>
+                    <div class="col-md-9">
+                        
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                            
+                            <div class="gb-markdown book-page-inner">
+                                <h1 id="22-&#x5BA2;&#x6237;&#x7AEF;&#x6807;&#x8BC6;">2.2. &#x5BA2;&#x6237;&#x7AEF;&#x6807;&#x8BC6;</h1>
+<p>&#x6388;&#x6743;&#x670D;&#x52A1;&#x5668;&#x9881;&#x53D1;&#x7ED9;&#x5DF2;&#x6CE8;&#x518C;&#x5BA2;&#x6237;&#x7AEF;&#x5BA2;&#x6237;&#x7AEF;&#x6807;&#x8BC6;&#x2014;&#x2014;&#x4E00;&#x4E2A;&#x4EE3;&#x8868;&#x5BA2;&#x6237;&#x7AEF;&#x63D0;&#x4F9B;&#x7684;&#x6CE8;&#x518C;&#x4FE1;&#x606F;&#x7684;&#x552F;&#x4E00;&#x5B57;&#x7B26;&#x4E32;&#x3002;&#x5BA2;&#x6237;&#x7AEF;&#x6807;&#x8BC6;&#x4E0D;&#x662F;&#x4E00;&#x4E2A;&#x79D8;&#x5BC6;&#xFF0C;&#x5B83;&#x66B4;&#x9732;&#x7ED9;&#x8D44;&#x6E90;&#x6240;&#x6709;&#x8005;&#x5E76;&#x4E14;&#x4E0D;&#x80FD;&#x5355;&#x72EC;&#x7528;&#x4E8E;&#x5BA2;&#x6237;&#x7AEF;&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;&#x3002;&#x5BA2;&#x6237;&#x7AEF;&#x6807;&#x8BC6;&#x5BF9;&#x4E8E;&#x6388;&#x6743;&#x670D;&#x52A1;&#x5668;&#x662F;&#x552F;&#x4E00;&#x7684;&#x3002;</p>
+<p>&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x5927;&#x5C0F;&#x672C;&#x89C4;&#x8303;&#x672A;&#x5B9A;&#x4E49;&#x3002;&#x5BA2;&#x6237;&#x7AEF;&#x5E94;&#x8BE5;&#x907F;&#x514D;&#x5BF9;&#x6807;&#x8BC6;&#x5927;&#x5C0F;&#x505A;&#x5047;&#x8BBE;&#x3002;&#x6388;&#x6743;&#x670D;&#x52A1;&#x5668;&#x5E94;&#x8BB0;&#x5F55;&#x5176;&#x53D1;&#x653E;&#x7684;&#x4EFB;&#x4F55;&#x6807;&#x8BC6;&#x7684;&#x5927;&#x5C0F;&#x3002;</p>
+
+                            </div>
+                            
+                        
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../gitbook/gitbook.js"></script>
+
+    
+    <script src="../gitbook/gitbook-plugin-ga/plugin.js"></script>
+    
+
+    
+    <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+    
+
+    
+    <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+    
+
+<script>
+(function() {
+    gitbook.page.hasChanged({"page":{"title":"客户端标识","level":"1.3.2","depth":2,"next":{"title":"客户端身份验证","level":"1.3.3","depth":2,"path":"Section02/2.3.md","ref":"Section02/2.3.md","articles":[{"title":"客户端密码","level":"1.3.3.1","depth":3,"path":"Section02/2.3.1.md","ref":"Section02/2.3.1.md","articles":[]},{"title":"其他身份验证方法","level":"1.3.3.2","depth":3,"path":"Section02/2.3.2.md","ref":"Section02/2.3.2.md","articles":[]}]},"previous":{"title":"客户端类型","level":"1.3.1","depth":2,"path":"Section02/2.1.md","ref":"Section02/2.1.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-opendocs","-sharing","-fontsettings","ga"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"ga":{"configuration":"auto","token":"UA-131598830-2"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"theme-opendocs":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"RFC6749","gitbook":"*"},"file":{"path":"Section02/2.2.md","mtime":"2019-08-15T02:35:20.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-15T02:40:32.168Z"},"basePath":"..","book":{"language":""}});
+})();
+</script>
+
+        
+    </body>
+</html>
+
